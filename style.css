@@ -106,7 +106,7 @@ header {
   justify-content: space-between;
   padding: 0 10%;
   gap: 40px;
-  overflow: hidden; /* cache ce qui dépasse */
+  overflow: hidden; 
 }
 
 /* Particles limité au Hero */
@@ -116,13 +116,13 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* derrière */
+  z-index: 0; 
 }
 
 .hero-text,
 .hero-img {
   position: relative;
-  z-index: 1; /* devant */
+  z-index: 1; 
 }
 
 .hero-text {
