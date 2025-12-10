@@ -105,16 +105,17 @@
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <form id="contact-form" action="https://formspree.io/f/movngbaa" method="POST">
-    <input type="text" name="name" placeholder="Nom" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Message" required></textarea>
-    <button type="submit" class="btn">Envoyer</button>
-  </form>
+  <div id="contact-form" class="form">
+    <input id="input-contact-name" type="text" name="name" placeholder="Nom" required>
+    <input id="input-contact-email" type="email" name="email" placeholder="Email" required>
+    <textarea id="input-contact-message" name="message" placeholder="Message" required></textarea>
+    <button id="btn-contact-form" class="btn">Envoyer</button>
+  </div>
 </section>
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Mon Portfolio | Créé avec ❤️ et passion</p>
+    <p>Hébergé par Unrecon</p>
   </footer>
 
   <!-- LIGHTBOX -->
@@ -129,5 +130,6 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="script.js"></script>
+  <script src="contact.js"></script>
 </body>
 </html>
