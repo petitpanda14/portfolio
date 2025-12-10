@@ -180,6 +180,7 @@ header {
   transition: all 0.3s ease;
   font-weight: 600;
   box-shadow: 0 0 10px rgba(100,255,218,0.3);
+  background-color: #112240;
 }
 
 .btn:hover {
@@ -332,7 +333,7 @@ blockquote {
   background: #112240;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -340,7 +341,7 @@ form {
   margin: auto;
 }
 
-form input, form textarea {
+.form input, .form textarea {
   padding: 14px;
   border-radius: 8px;
   border: none;
@@ -350,7 +351,7 @@ form input, form textarea {
   box-shadow: 0 0 10px rgba(100,255,218,0.2);
 }
 
-form button {
+.form button {
   cursor: pointer;
 }
 
