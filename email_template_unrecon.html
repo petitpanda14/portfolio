@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau message de contact - Unrecon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4A90E2 0%, #00C9FF 100%);
+            padding: 40px 40px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .logo-container {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            filter: brightness(0) invert(1);
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .header-title {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+            letter-spacing: -0.5px;
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #475569;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            animation: fadeIn 0.8s ease-out 0.6s both;
+        }
+
+        .intro-text strong {
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 24px;
+            border-left: 4px solid #4A90E2;
+            animation: fadeIn 0.8s ease-out 0.8s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(74, 144, 226, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .info-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: #1e293b;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .message-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 28px;
+            border: 1px solid #e2e8f0;
+            animation: fadeIn 0.8s ease-out 1s both;
+            position: relative;
+        }
+
+        .message-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 60px;
+            color: rgba(74, 144, 226, 0.08);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .message-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            font-weight: 700;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .message-content {
+            font-size: 15px;
+            color: #334155;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer {
+            background: #f8fafc;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: #64748b;
+            line-height: 1.6;
+            animation: fadeIn 0.8s ease-out 1.2s both;
+        }
+
+        .timestamp {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 16px;
+            background: #ffffff;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+            animation: fadeIn 0.8s ease-out 1.4s both;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .header {
+                padding: 30px 25px 40px;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+
+            .footer {
+                padding: 25px 25px;
+            }
+
+            .header-title {
+                font-size: 24px;
+            }
+
+            .logo {
+                max-width: 160px;
+            }
+
+            .info-card, .message-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header avec logo et titre -->
+        <div class="header">
+            <div class="logo-container">
+                <img src="unrecon-logo_complet.png" alt="Unrecon Logo" class="logo">
+            </div>
+            <h1 class="header-title">Nouveau message de contact</h1>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="content">
+            <p class="intro-text">
+                Vous avez reçu un <strong>nouveau message</strong> via le formulaire de contact de votre site web.
+            </p>
+
+            <!-- Carte Nom -->
+            <div class="info-card">
+                <div class="info-label">Nom du contact</div>
+                <div class="info-value">{{NOM_COMPLET}}</div>
+            </div>
+
+            <!-- Carte Email -->
+            <div class="info-card">
+                <div class="info-label">Adresse email</div>
+                <div class="info-value">{{EMAIL_ADDRESS}}</div>
+            </div>
+
+            <!-- Carte Message -->
+            <div class="message-card">
+                <div class="message-label">Message</div>
+                <div class="message-content">{{MESSAGE_CONTENT}}</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="footer-text">
+                Ce message a été envoyé via le formulaire de contact Unrecon.<br>
+                Pensez à répondre rapidement pour maintenir une excellente expérience client.
+            </p>
+            <div class="timestamp">
+                {{DATE_TIME}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
