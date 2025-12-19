@@ -3,135 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Portfolio</title>
+  <title>Théo | Développeur Web & Script</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+
   <!-- HEADER -->
-  <header>
-    <div class="logo">Portfolio</div>
+  <header class="header">
+    <div class="logo">Théo.dev</div>
     <nav class="navbar">
       <a href="#hero">Accueil</a>
       <a href="#about">À propos</a>
       <a href="#skills">Compétences</a>
       <a href="#services">Services</a>
       <a href="#projects">Projets</a>
-      <a href="#testimonials">Avis</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
   </header>
 
-  <!-- PARTICLES BACKGROUND -->
-  <div id="particles-js"></div>
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div id="particles-js"></div>
 
-<!-- HERO -->
-<section id="hero" class="hero">
-  <div id="particles-js"></div> <!-- Particles seulement ici -->
-
-  <div class="hero-text">
-    <h2>salut, je m’appel Théo et je suis</h2>
-    <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
-    <p>Développeur web passionné, créant des sites modernes et élégants.</p>
-    <a href="#projects" class="btn">Voir mes projets</a>
-  </div>
-  <div class="hero-img">
-  </div>
-</section>
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>À propos</h2>
-    <div class="about-container">
-      <div>
-        <p>
-          Je suis un développeur spécialisé en HTML, CSS et JavaScript. 
-          J’adore créer des interfaces modernes, animées et responsives.
-        </p>
+    <div class="hero-text">
+      <h2>Salut, moi c’est Théo 👋</h2>
+      <h1>
+        <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+      </h1>
+      <p>
+        Développeur Web, Bots Discord et Scripts FiveM.<br>
+        Solutions modernes, propres et performantes.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">Voir mes projets</a>
+        <a href="#contact" class="btn btn-outline">Me contacter</a>
       </div>
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>À propos de moi</h2>
+    <p class="section-text">
+      Développeur passionné spécialisé dans la création de sites web modernes,
+      de bots Discord performants et de scripts personnalisés pour serveurs FiveM.
+      J’accorde une grande importance à la qualité du code, aux performances
+      et à l’expérience utilisateur.
+    </p>
+  </section>
+
   <!-- SKILLS -->
-  <section id="skills">
+  <section id="skills" class="section dark">
     <h2>Compétences</h2>
     <div class="skills-grid">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">React</div>
-      <div class="skill">Node.js</div>
-      <div class="skill">MongoDB</div>
+      <div class="skill-card">
+        <h3>Web</h3>
+        <p>HTML, CSS, JavaScript, Responsive Design</p>
+      </div>
+      <div class="skill-card">
+        <h3>Bots Discord</h3>
+        <p>Discord.js, commandes slash, modération, tickets</p>
+      </div>
+      <div class="skill-card">
+        <h3>FiveM</h3>
+        <p>Lua, ESX, QBCore, scripts optimisés</p>
+      </div>
     </div>
   </section>
 
   <!-- SERVICES -->
-  <section id="services">
+  <section id="services" class="section">
     <h2>Services</h2>
     <div class="services-grid">
-      <div class="card">Création de sites web modernes</div>
-      <div class="card">Design responsive</div>
-      <div class="card">Optimisation SEO</div>
-      <div class="card">Applications web dynamiques</div>
+      <div class="card">Création de sites web professionnels</div>
+      <div class="card">Développement de bots Discord sur mesure</div>
+      <div class="card">Scripts FiveM personnalisés</div>
+      <div class="card">Maintenance & optimisation</div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projets</h2>
-    <div class="projects-grid">
-      <div class="project" data-image="images/projet1.jpg">
-        <h3>Projet 1</h3>
-        <p>Application web interactive.</p>
-      </div>
-      <div class="project" data-image="images/projet2.png">
-        <h3>Projet 2</h3>
-        <p>Portfolio dynamique.</p>
-      </div>
-      <div class="project" data-image="images/projet3.jpg">
-        <h3>Projet 3</h3>
-        <p>Dashboard avec API.</p>
-      </div>
+<section id="projects" class="section dark">
+  <h2>Projets</h2>
+
+  <div class="projects-grid">
+    <div class="project">
+      <h3> Bot Discord – Modération</h3>
+      <p>
+        Bot Discord complet avec système de tickets,
+        logs, permissions, modération et commandes avancées.
+      </p>
+      <span class="project-tag">Discord.js</span>
+    </div>
+
+    <div class="project">
+      <h3>Site Web – Portfolio</h3>
+      <p>
+        Site web moderne, responsive et optimisé,
+        avec animations, UX soignée et design professionnel.
+      </p>
+      <span class="project-tag">HTML • CSS • JavaScript</span>
+    </div>
+
+    <div class="project">
+      <h3>Script FiveM</h3>
+      <p>
+        Script FiveM optimisé pour serveur RP,
+        compatible ESX / QBCore, avec interface propre.
+      </p>
+      <span class="project-tag">Lua • FiveM</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+  <h2>Avis</h2>
+
+  <div class="testimonials">
+    <blockquote>
+      "Un excellent développeur, très créatif !"
+      <span>— Client A</span>
+    </blockquote>
+
+    <blockquote>
+      "Travail rapide et de qualité."
+      <span>— Client B</span>
+    </blockquote>
+
+    <blockquote>
+      "Un travail rapide, efficace et de qualité !"
+      <span>— James Benone</span>
+    </blockquote>
+  </div>
+</section>
+
+
+  <!-- CONTACT (INTOUCHABLE) -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div id="contact-form" class="form">
+      <input id="input-contact-name" type="text" name="name" placeholder="Nom" required>
+      <input id="input-contact-email" type="email" name="email" placeholder="Email" required>
+      <textarea id="input-contact-message" name="message" placeholder="Message" required></textarea>
+      <button id="btn-contact-form" class="btn">Envoyer</button>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <h2>Avis</h2>
-    <div class="testimonials">
-      <blockquote>"Un excellent développeur, très créatif !" – Client A</blockquote>
-      <blockquote>"Travail rapide et de qualité." – Client B</blockquote>
-      <blockquote>"Un travail rapide, efficace et de qualité !" – James Benone</blockquote>
-    </div>
-  </section>
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <div id="contact-form" class="form">
-    <input id="input-contact-name" type="text" name="name" placeholder="Nom" required>
-    <input id="input-contact-email" type="email" name="email" placeholder="Email" required>
-    <textarea id="input-contact-message" name="message" placeholder="Message" required></textarea>
-    <button id="btn-contact-form" class="btn">Envoyer</button>
-  </div>
-</section>
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Mon Portfolio | Créé avec ❤️ et passion</p>
-    <p>Hébergé par Unrecon</p>
+  <footer class="footer">
+    <p>&copy; 2025 Théo | Développeur Web & Script</p>
+    <p>Bots Discord • Scripts FiveM • Web</p>
   </footer>
 
   <!-- LIGHTBOX -->
   <div id="lightbox">
     <span id="close">&times;</span>
-    <img src="" alt="Agrandissement projet">
   </div>
 
-  <!-- BOUTON SCROLL TOP -->
+  <!-- SCROLL TOP -->
   <button id="scrollTop">⬆</button>
 
-  <!-- Scripts -->
+  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="popup.js"></script>
   <script src="script.js"></script>
   <script src="contact.js"></script>
+  <script src="cursor.js"></script>
+
 </body>
 </html>
